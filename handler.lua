@@ -209,6 +209,8 @@ print("\ncount in access:",count,"\n")
 
   --look for config
   i,j,status = pcall(string.find(req["body"],"\"config\":"))
+  print("\nretour de find: \n")
+  print(i,j,status,"\n")
   if status then
     print("\n",i," ",j,"\n")
     i,j,v = string.find(req["body"],"\"config\":\"(.-)\"")
